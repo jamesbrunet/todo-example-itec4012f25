@@ -6,6 +6,13 @@
 </head>
 <body>
 <h1>It'S REALLY ALLLIIIIVE</h1>
-<p>Tasks: {{ tasks }}</p>
+<p>Tasks:</p>
+<ul>
+    {% for task in tasks %}
+        <li> {% if task.completed %} ☑ {% else %} ☐ {% endif %}
+            {{ task.description }}
+        </li>
+    {% endfor %}
+</ul>
 </body>
 </html>
